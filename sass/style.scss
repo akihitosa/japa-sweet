@@ -1,0 +1,550 @@
+@use "./base/base";
+@use "./base/reset";
+@use "./global" as *;
+
+
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background-color: #F0F0F0;
+    color: #000000;
+    font-size: 1rem;
+    background-color: #E6E2D7;
+}
+
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+ul {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+}
+
+.inner {
+    width: 71vw;
+    margin: 0 auto;
+    padding: 0 20px;
+    writing-mode: vertical-rl;
+
+    @include mq("md") {
+        width: 100%;
+        padding: 0 35px;
+    }
+}
+
+// header ----------------------------------------------------------------------
+
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/mainvisual-pc.jpg);
+    background-repeat: no-repeat;
+    /* 画像の繰り返しを指定 */
+    background-size: cover;
+    /* 画像のサイズを指定    */
+    background-position: 50% 5%;
+    position: relative;
+    margin-bottom: 5px;
+    writing-mode: vertical-rl;
+
+    @include mq("md") {
+        background-image: url(../images/mainvisual-sp.jpg);
+        height: 86.7vh;
+    }
+}
+
+
+.header_title {
+    padding-top: 63px;
+    padding-right: 84px;
+    margin-left: 57px;
+    line-height: 1px;
+
+    @include mq("md") {
+        padding-top: 20px;
+        padding-right: 20px;
+        margin-left: 55px;
+    }
+}
+
+.header_rink_right {
+    width: 40px;
+    height: 91.75px;
+
+}
+
+.header_box {
+    color: #F0F0F0;
+}
+
+.header_nav {}
+
+.header_menu {
+    margin-top: 64px;
+
+    li:not(:last-child) {
+        margin-left: 19px;
+    }
+
+    a {
+        color: #F0F0F0;
+    }
+
+    @include mq("md") {
+        margin-top: 21px;
+
+        li:not(:last-child) {
+            margin-left: 18px;
+        }
+    }
+}
+
+.header_rink_left_box {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    width: 70px;
+    height: 260px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px;
+
+    @include mq("md") {
+        position: absolute;
+        bottom: 20px;
+        left: 18px;
+        height: 252px;
+    }
+}
+
+.header_rink_left {
+    display: block;
+    border: 1px solid #CCCCCC;
+    margin: 0 auto;
+    padding: 33px 13px 0 13px;
+    color: #F0F0F0;
+
+    @include mq("md") {
+        padding: 30px 13px 0 13px;
+    }
+}
+
+
+// news -----------------------------------------------------------------------
+
+.section2 {
+    margin: 183px auto 0px auto;
+
+    @include mq("md") {
+        margin-top: 77px;
+        padding: 0 9.5%;
+    }
+}
+
+.news_left {
+    margin-right: -18px;
+}
+
+.news_left_title {
+    @include mq("md") {
+        font-size: 0.75rem;
+    }
+}
+
+.news_left_info {
+    font-size: 2.25rem;
+    padding-top: 5px;
+
+    @include mq("md") {
+        font-size: 1.75rem;
+    }
+}
+
+.news_center {}
+
+.news_info {
+    margin-top: 86px;
+    margin-right: 92px;
+
+
+    li {
+        padding: 17px 25.5px;
+        border-right: 1px solid #000;
+    }
+
+    li:last-child {
+        border-left: 1px solid #000;
+    }
+
+    @include mq("md") {
+        margin-top: 21px;
+        margin-right: 25px;
+
+        li {
+            padding: 17px 6.2px;
+        }
+
+        .news_info_li_last {
+            border-left: 1px solid #000;
+        }
+
+        .news_info_li {
+            display: none
+        }
+    }
+}
+
+.news_time {
+    font-size: 0.660rem;
+}
+
+.news_text {
+    letter-spacing: 0.3px;
+}
+
+// create -------------------------------------------------------------------------
+
+.section3 {
+    width: 71vw;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-bottom: 130px;
+    margin-top: 179px;
+
+    @include mq("md") {}
+}
+
+.create1 {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.create {
+    margin-right: -21px;
+    align-items: center;
+    display: flex;
+    writing-mode: vertical-rl;
+
+    @include mq("md") {}
+}
+
+.create_title {
+    font-size: 2.25rem;
+    padding-top: 10px;
+    letter-spacing: 1px;
+
+    @include mq("md") {
+        font-size: 1.5rem;
+        letter-spacing: 0.3px;
+    }
+}
+
+.create_sub-title {
+    font-size: 0.870rem;
+    margin-top: 17px;
+    letter-spacing: -0.6px;
+
+    @include mq("md") {
+        display: none;
+    }
+}
+
+.create_img_box {
+    width: 656px;
+    margin-right: 11.3px;
+    position: relative;
+    margin-top: 111px;
+
+    @include mq("md") {
+        width: 99%;
+        height: 69%;
+        margin-top: 80px;
+        margin-right: 3.3px;
+    }
+}
+
+.create_img {}
+
+.create_text {
+    width: 358px;
+    height: 135px;
+    background-color: rgb(249, 233, 6, 0.6);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+
+    @include mq("md") {
+        width: 57.6%;
+        height: 90px;
+        top: 72.6%;
+        left: -6.5%;
+
+        p {
+            font-size: 0.875rem;
+        }
+    }
+
+    p {
+        margin-top: -2px;
+        margin-left: 3px;
+        line-height: 1;
+        letter-spacing: 0.3px;
+        color: #F0F0F0;
+
+    }
+}
+
+
+// science -----------------------------------------------------------------------
+.section4 {
+    writing-mode: vertical-lr;
+    margin-top: 176px;
+    position: relative;
+    margin-bottom: 186px;
+
+    @include mq("md") {
+        margin-top: 0;
+        margin-bottom: 99px;
+    }
+}
+
+.science {
+    margin-left: -21px;
+    display: flex;
+    align-items: center;
+    height: 461px;
+
+    @include mq("md") {
+        height: 204px;
+    }
+}
+
+.science_title {
+    font-size: 2.25rem;
+    padding-top: 10px;
+    letter-spacing: 1px;
+
+    @include mq("md") {
+        font-size: 1.5rem;
+        letter-spacing: 0.2px;
+    }
+}
+
+.science_sub-title {
+    font-size: 0.870rem;
+    margin-top: 17px;
+    letter-spacing: -0.6px;
+
+    @include mq("md") {
+        display: none;
+    }
+}
+
+.science_img {
+    width: 657.2px;
+    height: 438px;
+    margin-top: 112px;
+    margin-left: 10.3px;
+
+
+    @include mq("md") {
+        width: 99%;
+        height: 69%;
+        margin-top: 80px;
+        margin-left: 4px;
+    }
+}
+
+.science_text {
+    writing-mode: horizontal-tb;
+    width: 369px;
+    height: 135px;
+    background-color: rgb(149, 42, 38, 0.6);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    bottom: -20px;
+    left: 370px;
+
+    p {
+        margin-top: 2px;
+        margin-left: 6px;
+        line-height: 1;
+        letter-spacing: 1px;
+        color: #F0F0F0;
+    }
+
+    @include mq("md") {
+        width: 51%;
+        height: 90px;
+        position: absolute;
+        top: 71.7%;
+        left: 48.7%;
+
+        p {
+            font-size: 0.875rem;
+            letter-spacing: 0.0px;
+            margin-top: -1px;
+            margin-left: 4px;
+        }
+    }
+}
+
+
+// map -ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+.map {
+    /* Google Mapを囲う要素 */
+    position: relative;
+    width: 100%;
+    height: 461px;
+
+    iframe {
+        vertical-align: bottom;
+    }
+
+    @include mq("md") {
+        height: 65vh;
+    }
+}
+
+/* Google Mapのiframe */
+.map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    @include mq("md") {
+        height: 100%;
+    }
+}
+
+// footer -----------ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+.footer {}
+
+.footer_block {
+    padding-top: 85px;
+    width: 100%;
+    height: 76vh;
+    background-color: #000;
+    background-position: 50% 5%;
+    position: relative;
+    writing-mode: vertical-rl;
+
+    @include mq("md") {
+        padding-top: 40px;
+        height: 59.5vh;
+    }
+}
+
+
+.footer_title {
+    padding-right: 84px;
+    margin-left: 57px;
+    line-height: 1px;
+
+    @include mq("md") {
+        padding-right: 20px;
+        margin-left: 20px;
+    }
+}
+
+.footer_rink_right {
+    width: 40px;
+    height: 91.75px;
+}
+
+.footer_box {
+    color: #F0F0F0;
+    margin-top: -2px;
+}
+
+.adres {
+    text-orientation: upright;
+    font-size: 0.875rem;
+    margin-left: 57px;
+
+    @include mq("md") {
+        margin-left: 19px;
+    }
+}
+
+.footer_nav {}
+
+.footer_menu {
+
+    li:not(:last-child) {
+        margin-left: 19px;
+    }
+
+    a {
+        color: #F0F0F0;
+    }
+
+    @include mq("md") {
+        li:not(:last-child) {
+            margin-left: -1px;
+        }
+    }
+}
+
+.footer_rink_left_box {
+    position: absolute;
+    left: 1.7%;
+
+    p {
+        color: #F0F0F0;
+    }
+
+    @include mq("md") {
+        position: absolute;
+        left: 4.4%;
+    }
+}
+
+.footer_rink_left {
+    display: block;
+    border: 1px solid #CCCCCC;
+    margin: 0 auto;
+    padding: 33px 13px 0 13px;
+    color: #F0F0F0;
+}
+
+.left_box_text1 {
+    padding-bottom: 5px;
+    position: relative;
+    font-size: 0.875rem;
+}
+
+.left_box_text1::after {
+    content: "";
+    width: 12px;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    top: 163px;
+    left: 6px;
+}
+
+.footer_copylite {
+    color: #F0F0F0;
+    background-color: #000;
+    font-size: 0.625rem;
+    text-align: center;
+
+}
